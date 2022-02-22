@@ -1,0 +1,126 @@
+
+
+
+2020-12-29 주문등록 JSON 연계테스트 4차 로그 
+basic auth  
+username : PO_PRM
+pass : Prm!12po
+
+url : http://192.168.200.108:53000/RESTAdapter/prm/sd0090
+type : post 
+
+orderNo: SO2020090153377
+
+
+
+
+
+
+
+
+
+{
+"ROW_D":[
+{
+	"SEQNO":"1"
+	,"ITEM_DIV_CD":""
+	,"CONSPRC":"0"
+	,"BT_MILEAGE":"0"
+	,"ITEM_CD":"MS100002"
+	,"DC_AMT":"0"
+	,"PROM_CD2":""
+	,"PLANT_CD":"1000"
+	,"PROM_CD3":""
+	,"PROM_CD1":""
+	,"PROM_CD6":""
+	,"PROM_CD7":""
+	,"PROM_CD4":""
+	,"PROM_CD5":""
+	,"SALES_AMT":"0"
+	,"PROM_CD8":""
+	,"SALES_VAT":"0"
+	,"DELV_AMT":"0"
+	,"PROM_CD9":""
+	,"SAVE_POS_CD":""
+	,"REAL_SALES_AMT":"0"
+	,"ORD_QTY":"3"
+	,"TAX_TP":"1"
+	,"COUP_DC_AMT":"0"
+	},
+{
+	"SEQNO":"1"
+	,"ITEM_DIV_CD":""
+	,"CONSPRC":"0"
+	,"BT_MILEAGE":"0"
+	,"ITEM_CD":"MS100001"
+	,"DC_AMT":"0"
+	,"PROM_CD2":""
+	,"PLANT_CD":"1000"
+	,"PROM_CD3":""
+	,"PROM_CD1":""
+	,"PROM_CD6":""
+	,"PROM_CD7":""
+	,"PROM_CD4":""
+	,"PROM_CD5":""
+	,"SALES_AMT":"0"
+	,"PROM_CD8":""
+	,"SALES_VAT":"0"
+	,"DELV_AMT":"0"
+	,"PROM_CD9":""
+	,"SAVE_POS_CD":""
+	,"REAL_SALES_AMT":"0"
+	,"ORD_QTY":"15"
+	,"TAX_TP":"1"
+	,"COUP_DC_AMT":"0"
+	}]
+,"ROW_H":[{
+	"OUT_SCHE_DT":"20201223"
+	,"SEQNO":"1"
+	,"PAY_TP_CD":"10"
+	,"REMARK":"PRM_TEST"
+	,"SHOP_CD":"700010"
+	,"ORD_NO":"SO2020090153377"
+	,"SAP_ORD_REASON":""
+	,"GW_DOC_ID":"1111"
+	,"SUPP_CD":"700020"
+	}]
+,"PO_COMMON":{
+	"IF_SDATE":"2020-12-24"
+	,"IF_USER":"2020000072"
+	,"IF_STIME":"14:19:41"
+	,"IF_CODE":""
+	,"IF_STAT":""
+	,"IF_MSGID":""
+	,"IF_MSG":""
+	}
+    ,"SYSTEM_DIV":"PRM"
+    ,"ORD_TP":"ZOR1"
+    ,"MART_PATH":"10"
+    ,"ITEM_GROUP":"10"
+}
+
+
+
+
+{
+    "MT_SD0090_PRM_response": {
+        "PO_COMMON": {
+            "IF_CODE": "SD0090 판매.재고이관 주문/등록 결과 IF송신(PRM->ERP->PRM) ",
+            "IF_STAT": "E",
+            "IF_MSG": "매장에 대한 도착지가 연결되어 있지 않습니다.을(를) 입력하지 않았습니다.",
+            "IF_SDATE": "2020-12-29",
+            "IF_STIME": "13:45:44",
+            "IF_USER": "POAPPLUSER",
+            "IF_MSGID": "3868dd3687501eeb92b216ccfc93ba73"
+        },
+        "ROW_RES_H": [
+            {
+                "SEQNO": 1,
+                "ORD_NO": "SO2020090153377",
+                "SAP_ORD_NO": "",
+                "ERR_YN": "E",
+                "ERR_DESC": "매장에 대한 도착지가 연결되어 있지 않습니다.을(를) 입력하지 않았습니다."
+            }
+        ]
+    }
+}
