@@ -48,3 +48,9 @@ class TestTdash(unittest.TestCase):
     df3 = df2.apply(lambda row: foo2(row), axis=1)
     print('#'*64 + ' Final df3')
     print(df3)
+
+  """
+  1. 기준정보는 dic 으로 만들어서 dic['GMS' + '_' + '13L'] 으로 읽어오고, 이게 DataFrame 이면 되겠다.
+  """
+  def test_dic_master(self):
+    pass
