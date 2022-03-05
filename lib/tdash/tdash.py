@@ -3,6 +3,8 @@
 
 import numpy as np
 import pandas as pd
+import xlrd
+import csv
 
 def is_same_columns(*dfs):
   if len(dfs) < 2:
@@ -24,6 +26,13 @@ def is_same_columns(*dfs):
     
   return yn
 
+def xls_to_csv(src, shidx, dest):
+  with xlrd.open_workbook(src) as wb:
+    sh = wb.sheet_by_index(shidx)
+    with open(dest, 'w', newline='', encoding='euc-kr') as f:
+      c = csv.writer(f)
+      for r in range(sh.nrows):
+        c.writerow(sh.row_values(r))
 
 ################################################################
 # private

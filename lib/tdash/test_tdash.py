@@ -54,3 +54,14 @@ class TestTdash(unittest.TestCase):
   """
   def test_dic_master(self):
     pass
+
+  def test_xls_to_csv(self):
+    print('#'*64 + ' test_cls_to_csv')
+    xls_path = './resources/주택도시보증공사_전국 신규 민간아파트 분양가격 동향_20211130.xlsx'
+    sheet_index = 0
+    csv_out_path = './dest/foo.csv'
+    td.xls_to_csv(xls_path, sheet_index, csv_out_path)
+    # pandas 로 읽기
+    df = pd.read_csv(csv_out_path, encoding='euc-kr')
+    print(df.shape)
+    pass
